@@ -24,6 +24,30 @@ namespace WeekdayFinder.Models
                 Console.WriteLine($"Your result is: {result}");
                 Console.WriteLine("--------------------------------------");
                 
+                Console.WriteLine();
+                Console.WriteLine("To check another day of the week, enter 'Y', to exit app, enter 'N");
+                string userResponse = Console.ReadLine().ToUpper();
+
+                switch (userResponse)
+                {
+                    case "Y":
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Main();
+                        break;
+                    
+                    case "N":
+                        Console.WriteLine();
+                        Console.WriteLine("Bye Bye");
+                        break;
+
+                    default:
+                        Console.WriteLine();
+                        Console.WriteLine("Sorry, I did not get that, try again");
+                        Main();
+                        break;
+                }
+                
 
 
            }
