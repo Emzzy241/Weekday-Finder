@@ -18,10 +18,11 @@ namespace WeekdayFinder.Models
                 
                 MyWeekdayFinder newWeekdayFinder = new MyWeekdayFinder();
 
-                string result = newWeekdayFinder.DayOfWeekCalculator(userDate);
+                string dayOfWeek = newWeekdayFinder.DayOfWeekCalculator(userDate);
                 Console.WriteLine();
                 Console.WriteLine("--------------------------------------");
-                Console.WriteLine($"Your result is: {result}");
+                DateTime date = DateTime.Parse(userDate);
+                Console.WriteLine("The day of the week for " + date.ToShortDateString() + " is " + dayOfWeek);
                 Console.WriteLine("--------------------------------------");
                 
                 Console.WriteLine();
